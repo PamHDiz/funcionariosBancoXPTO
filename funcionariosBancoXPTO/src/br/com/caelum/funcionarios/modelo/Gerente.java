@@ -17,9 +17,14 @@ public class Gerente extends Funcionario {
 	
 	// reescrita do método chamando o método criado na classe mãe com a palavra chave 'super' e 
 	// adicionando 1000.0 reais a ele
+	//
+	// public double getBonificacao() {
+	//   return super.getBonificacao() + 1000.0;
+	// }  
+	
 	@Override 
 	public double getBonificacao() {
-		return super.getBonificacao() + 1000.0;
+		return this.salario * 0.15;
 	} 
 
 	public int getSenha() {
