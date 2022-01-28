@@ -1,5 +1,6 @@
 package br.com.caelum.funcionarios.main;
 
+import br.com.caelum.funcionarios.controle.ControleDeBonificacoes;
 import br.com.caelum.funcionarios.modelo.Funcionario;
 import br.com.caelum.funcionarios.modelo.Gerente;
 
@@ -7,12 +8,24 @@ public class TestaGerente {
 
 	public static void main(String[] args) {
 		
+		ControleDeBonificacoes controle = new ControleDeBonificacoes();
+		
 		Gerente gerente = new Gerente();
 		
-		gerente.setNome("João da Silva");
-		Funcionario funcionario = gerente;
-		funcionario.setSalario(5000.0);
-		System.out.println(funcionario.getBonificacao());
+		
+		gerente.setSalario(5000.0);
+		controle.registra(gerente);
+		
+		Funcionario funcionario = new Funcionario();
+		funcionario.setSalario(1500.0);
+		controle.registra(funcionario);
+		
+		System.out.println(controle.getTotalDeBonificacoes());
+		
+		
+		
+		
+		//System.out.println(funcionario.getBonificacao());
 		// Por causa do Polimorfismo, o objeto funcionário que se referencia ao gerente
 		// consegue chamar o método reescrito da classe Gerente
 		
