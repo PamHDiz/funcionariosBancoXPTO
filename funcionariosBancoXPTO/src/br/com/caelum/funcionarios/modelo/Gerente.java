@@ -15,10 +15,12 @@ public class Gerente extends Funcionario {
 		}
 	}
 	
-	@Override
+	// reescrita do método chamando o método criado na classe mãe com a palavra chave 'super' e 
+	// adicionando 1000.0 reais a ele
+	@Override 
 	public double getBonificacao() {
-		return this.salario * 0.15;
-	}
+		return super.getBonificacao() + 1000.0;
+	} 
 
 	public int getSenha() {
 		return senha;
