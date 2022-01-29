@@ -16,11 +16,7 @@ public class TestaGerente {
 		gerente.setSalario(5000.0);
 		controle.registra(gerente);
 		
-		
-		
 		System.out.println(controle.getTotalDeBonificacoes());
-		
-		
 		
 		
 		//System.out.println(funcionario.getBonificacao());

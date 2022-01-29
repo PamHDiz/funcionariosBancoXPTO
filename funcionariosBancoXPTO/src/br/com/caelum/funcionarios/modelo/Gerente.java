@@ -1,6 +1,8 @@
 package br.com.caelum.funcionarios.modelo;
 
-public class Gerente extends Funcionario {
+import br.com.caelum.funcionarios.controle.Autenticavel;
+
+public class Gerente extends Funcionario implements Autenticavel {
 	
 	private int senha;
 	private int numeroFuncionariosGerenciados;
