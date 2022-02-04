@@ -1,6 +1,7 @@
 package br.com.caelum.funcionarios.main;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class TestaHashSet {
@@ -15,7 +16,17 @@ public class TestaHashSet {
 		cargos.add("Secretária");
 		cargos.add("Diretor");
 		
-		System.out.println(cargos);
+		//System.out.println(cargos);
+		
+		// retorna o iterador
+		Iterator<String> i = cargos.iterator();
+		while(i.hasNext()) {
+			//recebe a palavra
+			String palavra = i.next();
+			System.out.println(palavra);
+		}
+		
+		System.out.println();
 		
 		Set<String> conjunto = new HashSet<>();
 		
