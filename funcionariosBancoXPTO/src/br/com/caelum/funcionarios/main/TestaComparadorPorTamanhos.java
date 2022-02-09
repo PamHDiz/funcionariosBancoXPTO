@@ -24,16 +24,25 @@ public class TestaComparadorPorTamanhos {
 		
 		// Collections.sort(lista, new ComparadorPorTamanhos()); // ordena por tamanho da palavra
 		
+		// -------------------------------------------------------------------------------------
+		
 		// Podemos usar o recurso de classe anônima para esse caso. Instancia tudo aqui
 		// sem a necessidade de criar uma interface a parte.
 		
-		Comparator<String> comparador = new Comparator<String>() {
+		/*
+		 * Comparator<String> comparador = new Comparator<String>() { public int
+		 * compare(String s1, String s2) { return Integer.compare(s1.length(),
+		 * s2.length()); } };
+		 */
+		
+		// Ainda podemos simplificar mais ainda o código, conforme abaixo:
+		
+		Collections.sort(lista, new Comparator<String>() {
 			public int compare(String s1, String s2) {
 				return Integer.compare(s1.length(), s2.length());
 			}
-		};
+		});
 		
-		Collections.sort(lista, comparador);
 		System.out.println(lista);
 	}
 
